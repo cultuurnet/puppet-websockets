@@ -8,12 +8,12 @@ class websockets::params {
     'Ubuntu': {
       case $::operatingsystemrelease {
         '14.04': {
-          $ensure = 'present',
-          $package_ensure = 'present',
-          $config_user = 'www-data',
-          $config_group = 'www-data',
-          $service_manage = true,
-          $service_enable = true,
+          $ensure = 'present'
+          $package_ensure = 'present'
+          $config_user = 'www-data'
+          $config_group = 'www-data'
+          $service_manage = true
+          $service_enable = true
           $service_ensure = 'running'
         }
         default: {
