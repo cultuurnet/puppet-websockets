@@ -1,7 +1,7 @@
 class websockets::omd (
   $config_source,
-  $ensure = $::websockets::params::ensure
-  $package_ensure = $::websockets::params::package_ensure
+  $ensure = $::websockets::params::ensure,
+  $package_ensure = $::websockets::params::package_ensure,
   $config_user = $::websockets::params::config_user,
   $config_group = $::websockets::params::config_group,
   $service_manage = $::websockets::params::service_manage,
