@@ -9,7 +9,7 @@ class websockets::params {
       case $::operatingsystemrelease {
         '14.04','16.04': {
           $ensure = 'present'
-          $package_ensure = 'present'
+          $package_version = 'latest'
           $config_user = 'www-data'
           $config_group = 'www-data'
           $service_manage = true

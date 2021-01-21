@@ -3,7 +3,7 @@ class websockets (
   $config_file,
   $config_source,
   $ensure = $::websockets::params::ensure,
-  $package_ensure = $::websockets::params::package_ensure,
+  $package_version = $::websockets::params::package_version,
   $config_user = $::websockets::params::config_user,
   $config_group = $::websockets::params::config_group,
   $service_manage = $::websockets::params::service_manage,
@@ -25,7 +25,7 @@ class websockets (
     }
     'present': {
       package { $package_name:
-        ensure  => $package_ensure,
+        ensure  => $package_version,
         require => Profiles::Apt::Update['cultuurnet-tools']
       }
 
