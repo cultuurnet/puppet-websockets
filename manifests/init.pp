@@ -26,7 +26,7 @@ class websockets (
     'present': {
       package { $package_name:
         ensure  => $package_version,
-        require => Profiles::Apt::Update['cultuurnet-tools']
+        require => Apt::Source['cultuurnet-tools']
       }
 
       file { $config_file:
