@@ -7,7 +7,7 @@ class websockets::params {
   case $::operatingsystem {
     'Ubuntu': {
       case $::operatingsystemrelease {
-        '14.04','16.04','18.04': {
+        '14.04','16.04','18.04','20.04': {
           $ensure = 'present'
           $package_version = 'latest'
           $config_user = 'www-data'
